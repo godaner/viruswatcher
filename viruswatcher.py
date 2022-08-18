@@ -181,7 +181,7 @@ class watcher:
             self._email.send(self._name + suf, out_.format() + "\n" + in_.format())
 
 
-class raingod:
+class viruswatcher:
     def __init__(self, conf: {}):
         self._logger = logging.getLogger()
         self._conf = conf
@@ -239,7 +239,7 @@ def main():
     logging.basicConfig(level=lev,
                         format='%(asctime)s %(levelname)s %(pathname)s:%(lineno)d %(thread)s %(message)s', handlers=hs)
     logger = logging.getLogger()
-    rm = raingod(conf)
+    rm = viruswatcher(conf)
     logger.info("{} info: {}".format(name, rm))
     rm.start()
 
